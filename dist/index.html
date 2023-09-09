@@ -7,9 +7,45 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <form action="submit">
-        <input type="text" id="location" name="location">
-        <button>Search</button>
-    </form>
+    <div id="currentData1">
+        <div id="city">
+        </div>
+        <div id="date">
+        </div>
+        <div id="currentWeather">
+            <img src="" alt="">
+            <span></span>
+        </div>
+
+    </div>
+    <div id="formHolder">
+        <form action="submit" id="searchCity">
+            <input type="text" id="location" name="location">
+            <button id="searchButton">Search</button>
+        </form>
+    </div>
+    <div id="currentData2">
+        <div id="temperatureFelt">
+            <img src="" alt="">
+            <span></span>
+        </div>
+        <div id="humidity">
+            <img src="" alt="">
+            <span></span>
+        </div>
+        <div id="rainChance">
+            <img src="" alt="">
+            <span></span>
+        </div>
+        <div id="windSpeed">
+            <img src="" alt="">
+            <span></span>
+        </div>
+    </div>
+    <div id="forecast">
+        <div>Today</div>
+        <div>Tomorrow</div>
+        <div>Day after Tomorrow</div>
+    </div>
 </body>
 </html>
