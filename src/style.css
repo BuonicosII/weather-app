@@ -46,6 +46,17 @@ table {
 	border-spacing: 0;
 }
 
+@font-face {
+    font-family: 'MyFont';
+    src: url('./Montserrat-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+html {
+    font-family: 'MyFont';
+}
+
 body {
     height: 100vh;
     display: grid;
@@ -85,13 +96,16 @@ body {
 
 #currentData1 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     grid-area: 1 / 1 / 2 / 2;
+    gap: 2vh;
 }
 
 #currentData2 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     grid-area: 1 / 6 / 2 / 7;
@@ -99,4 +113,20 @@ body {
 
 #forecast {
     grid-area: 3 / 3 / 4 / 5;
+}
+
+.invisible {
+    display: none;
+}
+
+#city span {
+    font-size: 6vh;
+}
+
+#date span, #country span {
+    font-size: 1.5vh;
+}
+
+#currentWeather span, #currentTemperature div span {
+    font-size: 2vh;
 }

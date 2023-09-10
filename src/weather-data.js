@@ -1,4 +1,4 @@
-
+import { format, parseISO } from "date-fns"
 
 //function to retrieve weather data for a given location 
 async function getWeatherData(location) {
@@ -6,26 +6,43 @@ async function getWeatherData(location) {
         let weather = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=4626ed69a3ed4fd284a194520230509&q=${location}&days=3`); 
         let weatherData = await weather.json();
         
-        let city = document.querySelector("#city");
+        let city = document.querySelector("#city span");
         city.textContent = weatherData.location.name
 
-        let date = document.querySelector("#date");
-        date.textContent = weatherData.location.localtime;
+        let country = document.querySelector("#country span");
+        country.textContent = weatherData.location.country;
+
+        let date = document.querySelector("#date span");
+        let dateArray = weatherData.location.localtime.split(" ");
+        let day = format(new Date (parseISO(dateArray[0])), "MMMM do yyyy");
+        date.textContent = day + " " + dateArray[1];
 
         let currentWeather = document.querySelector("#currentWeather span");
         currentWeather.textContent = weatherData.current.condition.text;
+
+        let currentTemperatureMetric = document.querySelector("#currentTemperature .metric span");
+        currentTemperatureMetric.textContent = weatherData.current.temp_c + " " + "°C";
+
+        let currentTemperatureImperial = document.querySelector("#currentTemperature .imperial span");
+        currentTemperatureImperial.textContent = weatherData.current.temp_f + " " + "°F";
         
-        let feelsLike = document.querySelector("#temperatureFelt span");
-        feelsLike.textContent = weatherData.current.feelslike_c;
+        let feelsLikeMetric = document.querySelector("#temperatureFelt .metric span");
+        feelsLikeMetric.textContent = weatherData.current.feelslike_c + " " + "°C";
 
-        let humidity = document.querySelector("#humidity span");
-        humidity.textContent = weatherData.current.humidity;
+        let feelsLikeImperial = document.querySelector("#temperatureFelt .imperial span");
+        feelsLikeImperial.textContent = weatherData.current.feelslike_f  + " " + "°F";
 
-        let rainChance = document.querySelector("#rainChance span");
-        rainChance.textContent = weatherData.forecast.forecastday[0].daily_chance_of_rain;
+        let humidity = document.querySelector("#humidity div");
+        humidity.textContent = weatherData.current.humidity  + " " + "%";
 
-        let windSpeed = document.querySelector("#windSpeed span");
-        windSpeed.textContent = weatherData.current.wind_kph;
+        let rainChance = document.querySelector("#rainChance div");
+        rainChance.textContent = weatherData.forecast.forecastday[0].day.daily_chance_of_rain + " " + "%";
+
+        let windSpeedMetric = document.querySelector("#windSpeed .metric span");
+        windSpeedMetric.textContent = weatherData.current.wind_kph + " " + "Km/h"; 
+
+        let windSpeedImperial = document.querySelector("#windSpeed .imperial span");
+        windSpeedImperial.textContent = weatherData.current.wind_mph + " " + "Mph";
 
         console.log(weatherData);
     } catch {
