@@ -15,13 +15,20 @@ async function getWeatherData(location) {
         let date = document.querySelector("#date span");
         let dateArray = weatherData.location.localtime.split(" ");
         let day = format(new Date (parseISO(dateArray[0])), "MMMM do yyyy");
-        date.textContent = day + " " + dateArray[1];
+        date.textContent = day;
+
+        let hour = document.querySelector("#hour span");
+        hour.textContent = dateArray[1];
 
         let currentWeather = document.querySelector("#currentWeather span");
         currentWeather.textContent = weatherData.current.condition.text;
 
         let currentTemperatureMetric = document.querySelector("#currentTemperature .metric span");
         currentTemperatureMetric.textContent = weatherData.current.temp_c + " " + "°C";
+
+        let currentWeatherIcon = document.querySelector("#currentWeather img");
+        //create switch case scenario for currentWeather Icon and app backgroud
+
 
         let currentTemperatureImperial = document.querySelector("#currentTemperature .imperial span");
         currentTemperatureImperial.textContent = weatherData.current.temp_f + " " + "°F";
@@ -32,10 +39,10 @@ async function getWeatherData(location) {
         let feelsLikeImperial = document.querySelector("#temperatureFelt .imperial span");
         feelsLikeImperial.textContent = weatherData.current.feelslike_f  + " " + "°F";
 
-        let humidity = document.querySelector("#humidity div");
+        let humidity = document.querySelector("#humidity div .value");
         humidity.textContent = weatherData.current.humidity  + " " + "%";
 
-        let rainChance = document.querySelector("#rainChance div");
+        let rainChance = document.querySelector("#rainChance div .value");
         rainChance.textContent = weatherData.forecast.forecastday[0].day.daily_chance_of_rain + " " + "%";
 
         let windSpeedMetric = document.querySelector("#windSpeed .metric span");

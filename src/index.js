@@ -11,3 +11,4 @@ searchButton.addEventListener("click", () => {
     getWeatherData(locationField.value)
 })
 
+getWeatherData("Udine");
