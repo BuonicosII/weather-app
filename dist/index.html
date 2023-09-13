@@ -7,38 +7,39 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <div id="currentData1">
-        <div id="city">
-            <span></span>
-        </div>
-        <div id="country">
-            <span></span>
-        </div>
-        <div>
-            <div id="date">
+    <div id="holder1">
+        <div id="currentData1">
+            <div id="city">
+                <div></div>
+            </div>
+            <div id="country">
                 <span></span>
             </div>
-            <div id="hour">
-                <span></span>
-            </div>
-        </div>
-        <div id="currentSituation">
-            <img src="" alt="">
             <div>
-                <div id="currentWeather">
+                <div id="date">
                     <span></span>
                 </div>
-                <div id="currentTemperature">
-                    <div class="imperial invisible">
+                <div id="hour">
+                    <span></span>
+                </div>
+            </div>
+            <div id="currentSituation">
+                <img src="" alt="">
+                <div>
+                    <div id="currentWeather">
                         <span></span>
                     </div>
-                    <div class="metric">
-                        <span></span>
+                    <div id="currentTemperature">
+                        <div class="imperial invisible">
+                            <span></span>
+                        </div>
+                        <div class="metric">
+                            <span></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
     <div id="formHolder">
         <form action="submit" id="searchCity">
@@ -46,42 +47,44 @@
             <button id="searchButton">Search</button>
         </form>
     </div>
-    <div id="currentData2">
-        <div id="temperatureFelt">
-            <img src="../src/temperature_107818.png" alt="">
-            <div>
-                <span class="label">Temperature Felt</span>
-                <div class="imperial invisible">
-                    <span class="value"></span>
+    <div id="holder2">
+        <div id="currentData2">
+            <div id="temperatureFelt">
+                <img src="../src/Icons/temperature_107818.png" alt="">
+                <div>
+                    <span class="label">Temperature Felt</span>
+                    <div class="imperial invisible">
+                        <span class="value"></span>
+                    </div>
+                    <div class="metric">
+                        <span class="value"></span>
+                    </div>
                 </div>
-                <div class="metric">
+            </div>
+            <div id="humidity">
+                <img src="../src/Icons/smoke_7398108.png" alt="">
+                <div>
+                    <span class="label">Humidity</span>
                     <span class="value"></span>
                 </div>
             </div>
-        </div>
-        <div id="humidity">
-            <img src="../src/temperature_107818.png" alt="">
-            <div>
-                <span class="label">Humidity</span>
-                <span class="value"></span>
-            </div>
-        </div>
-        <div id="rainChance">
-            <img src="../src/temperature_107818.png" alt="">
-            <div>
-                <span class="label">Rain Chance</span>
-                <span class="value"></span>
-            </div>
-        </div>
-        <div id="windSpeed">
-            <img src="../src/wind-sign_72579.png" alt="">
-            <div>
-                <span class="label">Wind Speed</span>
-                <div class="imperial invisible">
+            <div id="rainChance">
+                <img src="../src/Icons/drop_606797.png" alt="">
+                <div>
+                    <span class="label">Rain Chance</span>
                     <span class="value"></span>
                 </div>
-                <div class="metric">
-                    <span class="value"></span>
+            </div>
+            <div id="windSpeed">
+                <img src="../src/Icons/wind-sign_72579.png" alt="">
+                <div>
+                    <span class="label">Wind Speed</span>
+                    <div class="imperial invisible">
+                        <span class="value"></span>
+                    </div>
+                    <div class="metric">
+                        <span class="value"></span>
+                    </div>
                 </div>
             </div>
         </div>
