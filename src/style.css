@@ -65,18 +65,19 @@ body {
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
+#formHolder {
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
 #searchCity {
     background-color: rgba(0, 0, 255, 0);
     width: 100%;
     display: flex;
     gap: 2vh;
-}
-
-#formHolder {
-    grid-area: 1 / 3 / 2 / 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #location {
@@ -107,6 +108,11 @@ body {
 
 #searchButton:hover {
     background-color: rgb(57, 143, 255);
+}
+
+#dropDownHolder {
+    width: 100%;
+    position: relative;
 }
 
 #holder1 {
@@ -211,4 +217,21 @@ body {
 
 img {
     filter: invert();
+}
+
+.drop-down {
+    position: absolute;
+    background-color: white;
+    width: calc(60% + 2vh);
+    max-height: 500px;
+    overflow: auto;
+    top: calc(7px);
+    border-radius: 1vh;
+} 
+
+.suggestion {
+    width: 100%;
+    height: 3vh;
+    padding: 1vh;
+    border-bottom: 1px solid rgb(128, 128, 128);
 }
