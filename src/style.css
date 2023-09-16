@@ -221,7 +221,7 @@ img {
 
 #drop-down {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.671);
+    background-color: rgb(255, 255, 255);
     width: calc(60% + 2vh);
     max-height: 500px;
     overflow: auto;
@@ -238,10 +238,19 @@ img {
     align-items: center;
 }
 
+.suggestion:hover, .lastSuggestion:hover {
+    background-color: rgb(0, 110, 255);
+    color: white;
+}
+
 .lastSuggestion {
     width: calc(100% - 1vh);
     padding: 1vh;
     padding-right: 0;
     display: flex;
     align-items: center;
+}
+
+.locationValue {
+    pointer-events: none
 }

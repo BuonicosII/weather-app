@@ -1,3 +1,14 @@
+function updateInput (event) {
+    let locationField = document.querySelector("#location");
+    locationField.value = event.target.querySelector(".locationValue").textContent;
+
+    let dropDownHolder = document.querySelector("#dropDownHolder");
+
+    while (dropDownHolder.hasChildNodes()) {
+        dropDownHolder.removeChild(dropDownHolder.firstChild)
+    }
+}
+
 async function autocomplete () {
     try {
         //get the location data through API 
@@ -25,14 +36,16 @@ async function autocomplete () {
             let suggestion = document.createElement("div");
             suggestion.classList.add("suggestion");
             let text = document.createElement("div");
+            text.setAttribute("class", "locationValue");
             text.textContent = location.name + ", " + location.country;
-            suggestion.appendChild(text)
+            suggestion.appendChild(text),
+            suggestion.addEventListener("click", updateInput)
             dropDown.appendChild(suggestion);
         }
 
         dropDown.lastChild.classList.remove("suggestion");
         dropDown.lastChild.classList.add("lastSuggestion");
-        
+
         }
     } catch {
         alert("Server is taking its time")
