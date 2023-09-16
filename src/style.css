@@ -144,8 +144,19 @@ body {
 
 }
 
+#forecastHolder {
+    grid-area: 3 / 2 / 5 / 5;
+    justify-content: center;
+    display: flex;
+}
+
 #forecast {
-    grid-area: 3 / 2 / 5 / 4;
+    width: 40vw;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr ;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-auto-flow: column;
 }
 
 .invisible {
@@ -253,4 +264,12 @@ img {
 
 .locationValue {
     pointer-events: none
+}
+
+.grid-item {
+    color: white;
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

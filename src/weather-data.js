@@ -1,10 +1,13 @@
 import { format, parseISO } from "date-fns"
+import { updateDays } from "./update-days";
 
 //function to retrieve weather data for a given location 
 async function getWeatherData(location) {
     try {
         let weather = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=4626ed69a3ed4fd284a194520230509&q=${location}&days=3`); 
         let weatherData = await weather.json();
+
+        updateDays(weatherData.forecast.forecastday[1].date, weatherData.forecast.forecastday[2].date);
         
         let city = document.querySelector("#city div");
         city.textContent = weatherData.location.name

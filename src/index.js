@@ -3,7 +3,6 @@ import { getWeatherData } from './weather-data';
 import { formHandler } from './form-handler';
 import { autocomplete } from './autocomplete';
 
-
 let searchButton = document.querySelector("form button");
 let locationField = document.querySelector("#location");
 
