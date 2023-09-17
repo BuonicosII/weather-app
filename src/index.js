@@ -6,11 +6,11 @@ import { toggleMetricImperial } from './toggleMetricImperial';
 
 let searchButton = document.querySelector("form button");
 let locationField = document.querySelector("#location");
-let toggle = document.querySelector("#measureSystem");
+//let toggle = document.querySelector("#measureSystem");
 
 
 locationField.addEventListener("input", autocomplete);
 searchButton.addEventListener("click", formHandler);
-toggle.addEventListener("click", toggleMetricImperial);
+//toggle.addEventListener("click", toggleMetricImperial);
 
 getWeatherData("Udine");
