@@ -273,3 +273,10 @@ img {
     justify-content: center;
     align-items: center;
 }
+
+#buttonHolder {
+    grid-area: 4 / 1 / 5 / 2;
+    display: flex;
+    padding-left: 7vh;
+    padding-bottom: 7vh;
+}
