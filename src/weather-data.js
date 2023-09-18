@@ -1,5 +1,8 @@
 import { format, parseISO } from "date-fns"
 import { updateDays } from "./update-days";
+import { todayForecast } from "./today-forecast";
+import { tomorrowForecast } from "./tomorrow-forecast";
+import { afterTmrwForecast } from "./dayAfterTomorrow-forecast";
 
 //function to retrieve weather data for a given location 
 async function getWeatherData(location) {
@@ -126,6 +129,12 @@ async function getWeatherData(location) {
         windSpeedImperial.textContent = weatherData.current.wind_mph + " " + "Mph";
 
         console.log(weatherData);
+
+        todayForecast(weatherData.forecast.forecastday[0]);
+        tomorrowForecast(weatherData.forecast.forecastday[1]);
+        afterTmrwForecast(weatherData.forecast.forecastday[2]);
+
+
     } catch {
         alert("Whoops, something went wrong");
     }

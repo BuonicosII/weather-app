@@ -273,6 +273,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #buttonHolder {
@@ -335,4 +336,8 @@ img {
     height: 4vh;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.grid-item img {
+    height: 2vh;
 }
