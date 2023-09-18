@@ -182,6 +182,7 @@ body {
 
 #currentSituation {
     display: flex;
+    gap: 2vh;
 }
 
 #temperatureFelt, #humidity, #rainChance, #windSpeed {
@@ -191,7 +192,7 @@ body {
     gap: 2vh;
 }
 
-#currentSituation img, #temperatureFelt img, #humidity img, #rainChance img, #windSpeed img {
+#temperatureFelt img, #humidity img, #rainChance img, #windSpeed img {
     height: 65%;
     margin-top: auto;
     margin-bottom: auto;
@@ -328,4 +329,10 @@ img {
     top: 2.5px;
     left: calc(2vh + 2.5px);
     transition: all 500ms;
+}
+
+#currentSituation img {
+    height: 4vh;
+    margin-top: auto;
+    margin-bottom: auto;
 }
