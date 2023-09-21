@@ -38,23 +38,23 @@ async function getWeatherData(location) {
         switch (weatherData.current.condition.code) {
             case 1000: 
                 if (weatherData.current.is_day === 1) {
-                    background.setAttribute("style", "background-image: url(../src/Background/sun.jpg); background-size: cover;");
+                    background.setAttribute("style", "background-image: url(./Background/sun.jpg); background-size: cover;");
                     currentWeatherImage.src = "../src/Icons/sunny.png";
                 } else if (weatherData.current.is_day === 0) {
-                    background.setAttribute("style", "background-image: url(../src/Background/clearnight.jpg); background-size: cover;");
+                    background.setAttribute("style", "background-image: url(./Background/clearnight.jpg); background-size: cover;");
                     currentWeatherImage.src = "../src/Icons/clearsky.png";
                 }
                 break;
             case 1003:
             case 1006:
             case 1009:
-                background.setAttribute("style", "background-image: url(../src/Background/cloudy.jpg); background-size: cover;");
+                background.setAttribute("style", "background-image: url(./Background/cloudy.jpg); background-size: cover;");
                 currentWeatherImage.src = "../src/Icons/cloudy.png";
                 break;
             case 1030:
             case 1135:
             case 1147:
-                background.setAttribute("style", "background-image: url(../src/Background/fog.jpg); background-size: cover;");
+                background.setAttribute("style", "background-image: url(./Background/fog.jpg); background-size: cover;");
                 currentWeatherImage.src = "../src/Icons/fog.png";
                 break;
             case 1063:
@@ -76,7 +76,7 @@ async function getWeatherData(location) {
             case 1246:
             case 1273:
             case 1276:
-                background.setAttribute("style", "background-image: url(../src/Background/rain.jpg); background-size: cover;");
+                background.setAttribute("style", "background-image: url(./Background/rain.jpg); background-size: cover;");
                 currentWeatherImage.src = "../src/Icons/rainy.png";
                 break;
             case 1066:
@@ -101,7 +101,7 @@ async function getWeatherData(location) {
             case 1264:
             case 1279:
             case 1282:
-                background.setAttribute("style", "background-image: url(Background/snow.jpg); background-size: cover;");
+                background.setAttribute("style", "background-image: url(./Background/snow.jpg); background-size: cover;");
                 currentWeatherImage.src = "../src/Icons/snowy.png";
         }
         //create switch case scenario for currentWeather Icon and app backgroud
