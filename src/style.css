@@ -145,14 +145,15 @@ body {
 }
 
 #forecastHolder {
-    grid-area: 3 / 2 / 5 / 5;
+    grid-area: 2 / 2 / 5 / 5;
     justify-content: center;
     display: flex;
+    align-items: center;
 }
 
 #forecast {
     width: 40vw;
-    height: 40vh;
+    height: 50vh;
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr ;
     grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
@@ -269,11 +270,12 @@ img {
 
 .grid-item {
     color: white;
-    font-size: 2vh;
+    font-size: 1.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 1.5vh;
 }
 
 #buttonHolder {
@@ -339,5 +341,28 @@ img {
 }
 
 .grid-item img {
-    height: 2vh;
+    height: 3vh;
+}
+
+.grid-item .imperial, .grid-item .metric {
+    font-size: 1.3vh;
+}
+
+#credits {
+    grid-area: -1 / -1 / -2 / -2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    color: white;
+    padding: 2vh;
+    gap: 1vh;
+}
+
+#credits div {
+    width: 210px;
+}
+
+a {
+    color:rgb(57, 143, 255)
 }
