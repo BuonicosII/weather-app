@@ -6,20 +6,20 @@ function forecastWeatherIcon(forecastData) {
     switch (forecastData.condition.code) {
         case 1000: 
             if (forecastData.is_day === 1) {
-                url = "../src/Icons/sunny.png";
+                url = "./Icons/sunny.png";
             } else if (forecastData.is_day === 0) {
-                url = "../src/Icons/clearsky.png";
+                url = "./Icons/clearsky.png";
             }
             break;
         case 1003:
         case 1006:
         case 1009:
-            url =  "../src/Icons/cloudy.png";
+            url =  "./Icons/cloudy.png";
             break;
         case 1030:
         case 1135:
         case 1147:
-            url =  "../src/Icons/fog.png";
+            url =  "./Icons/fog.png";
             break;
         case 1063:
         case 1087:
@@ -40,7 +40,7 @@ function forecastWeatherIcon(forecastData) {
         case 1246:
         case 1273:
         case 1276:
-            url = "../src/Icons/rainy.png";
+            url = "./Icons/rainy.png";
             break;
         case 1066:
         case 1069:
@@ -64,7 +64,7 @@ function forecastWeatherIcon(forecastData) {
         case 1264:
         case 1279:
         case 1282:
-            url = "../src/Icons/snowy.png";
+            url = "./Icons/snowy.png";
             break;
     }
 
