@@ -1,6 +1,7 @@
 import { getWeatherData } from './weather-data';
+import { startLoading, stopLoading } from './loading-animation';
 
-function formHandler () {
+async function formHandler () {
 
     event.preventDefault();
     
@@ -12,7 +13,9 @@ function formHandler () {
     } else {
         locationField.setCustomValidity("");
         locationField.reportValidity();
-        getWeatherData(locationField.value)
+        startLoading();
+        await getWeatherData(locationField.value);
+        stopLoading();
     }
 };
 
